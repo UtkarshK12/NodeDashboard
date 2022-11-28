@@ -6,6 +6,9 @@ require('dotenv/config')
 
 
 
+//connect to db
+mongoose.connect(process.env.DB_URI,{useNewUrlParser: true},()=>{console.log("Connected")});
+
 
 app.use(bodyParser.json());
 
@@ -18,8 +21,4 @@ app.get('/',(req,res)=>{
 }
 );
 
-//connect to db
-mongoose.connect(process.env.DB_URI,{useNewUrlParser: true},()=>{console.log("Connected")});
-
-app.listen(3000);
 
