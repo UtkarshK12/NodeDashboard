@@ -8,7 +8,7 @@ require('dotenv/config')
 
 //connect to db
 mongoose.connect(process.env.DB_URI,{useNewUrlParser: true},()=>{console.log("Connected")});
-
+app.listen(process.env.PORT || 3000)
 
 app.use(bodyParser.json());
 
@@ -20,5 +20,6 @@ app.get('/',(req,res)=>{
     res.send("We are home");
 }
 );
+
 
 
