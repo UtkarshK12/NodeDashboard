@@ -13,8 +13,8 @@ app.listen(process.env.PORT || 3000)
 app.use(bodyParser.json());
 
 //import routes
-const postsRoute=require('./routes/posts')
-app.use('/posts',postsRoute);
+const postsRoute=require('./routes/errors')
+app.use('/errors',postsRoute);
 
 app.get('/',(req,res)=>{
     res.send("We are home");
